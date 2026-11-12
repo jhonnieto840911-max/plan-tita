@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulador 3D conceptual de almacenamiento y abastecimiento de agua para el barrio Pescaito, Santa Marta.">
+  <title>Planta de Agua | Pescaito</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">INGENIERÍA DEL AGUA Y DESARROLLO SOSTENIBLE</p>
+      <h1>Planta de almacenamiento y abastecimiento</h1>
+      <p class="subtitle">Barrio Pescaito · Santa Marta, Magdalena</p>
+    </div>
+    <span class="tag">MODELO CONCEPTUAL 3D</span>
+  </header>
+
+  <main class="layout">
+    <section class="viewer" aria-label="Modelo tridimensional de la planta">
+      <div id="scene-container"></div>
+      <div class="view-hint">Arrastra para girar · Rueda para acercar · Clic derecho para desplazar</div>
+      <div class="legend">
+        <span><i class="dot water"></i> Agua</span>
+        <span><i class="dot structure"></i> Estructura</span>
+        <span><i class="dot pipe"></i> Tuberías</span>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <section class="panel-section">
+        <p class="eyebrow">MONITOREO CONCEPTUAL</p>
+        <h2>Almacenamiento</h2>
+        <div class="metric"><strong id="level-value">75%</strong><span>Nivel estimado</span></div>
+        <div class="progress"><div id="level-bar"></div></div>
+        <p class="small">Capacidad nominal del tanque: <b>50.000 L</b></p>
+        <p class="small">Volumen representado: <b id="volume-value">37.500 L</b></p>
+        <label for="level-slider">Modificar nivel del tanque</label>
+        <input id="level-slider" type="range" min="0" max="100" value="75">
+      </section>
+
+      <section class="panel-section">
+        <h2>Estación de bombeo</h2>
+        <p class="small">Activa o desactiva las bombas para visualizar su estado.</p>
+        <div id="pump-controls" class="pump-list"></div>
+        <div class="pump-summary"><span>Bombas encendidas</span><strong id="pump-count">2 / 4</strong></div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Datos de referencia</h2>
+        <div class="data-row"><span>Población de diseño preliminar</span><b>17.000 hab.</b></div>
+        <div class="data-row"><span>Dotación neta asumida</span><b>140 L/hab·día</b></div>
+        <div class="data-row"><span>Demanda neta estimada</span><b>2.380 m³/día</b></div>
+        <p class="notice">Valores ilustrativos para anteproyecto. No representan mediciones ni un diseño hidráulico aprobado.</p>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <span>Proyecto académico · Pescaito, Santa Marta</span>
+    <span>Versión inicial 0.1 · Datos sujetos a validación</span>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
