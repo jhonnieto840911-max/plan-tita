@@ -1,0 +1,1 @@
+# Archivos complementarios\n\n- `assets/modelos/planta_pescaito_conceptual.glb`: modelo 3D conceptual, abrible en Blender o visores GLB.\n- `calculo_preliminar_pescaito.xlsx`: hoja editable de demanda, caudales y autonomía, con supuestos y pendientes.\n\nArchivos académicos preliminares; no son diseño aprobado ni aptos para construcción.\n
